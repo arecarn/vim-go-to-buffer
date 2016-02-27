@@ -1,0 +1,55 @@
+*go-to-buffer* switch buffers like you switch tabs
+
+                                  go-to-buffer~
+
+Description ....................................... |go-to-buffer-description|
+Usage ............................................. |go-to-buffer-usage|
+    Key Mappings .................................. |go-to-buffer-key-mappings|
+Configuration ..................................... |go-to-buffer-configuration|
+    Variables ..................................... |go-to-buffer-variables|
+
+
+                                                              *go-to-buffer.txt*
+
+==============================================================================
+DESCRIPTION                                           *go-to-buffer-description*
+
+Navigate and switch you buffer just like you would with tabs
+
+==============================================================================
+USAGE                                                       *go-to-buffer-usage*
+
+------------------------------------------------------------------------------
+KEY MAPPINGS                                         *go-to-buffer-key-mappings*
+                                                *gb*
+gb                      Go to the next buffer. Wraps around from the last to
+                        the first one. Supplying a count will go to the
+                        {count} buffer.
+                        Plug mapping: `<Plug>(go-to-buffer-forward)`
+
+
+                                                *gB*
+gB                      Go to the previous buffer. Wraps around from the first
+                        to the last one. Supplying a count will go to the
+                        {count} buffer.
+                        Plug mapping: `<Plug>(go-to-buffer-backward)`
+
+==============================================================================
+CONFIGURATION                                       *go-to-buffer-configuration*
+
+------------------------------------------------------------------------------
+VARIABLES                                               *go-to-buffer-variables*
+
+                                                *g:go-to-buffer_default_mapping*
+g:go_to_buffer_default_mapping
+                        If set to 0 disables the default mappings
+                        (default: 1)
+
+                        Example of alternate mappings: >
+
+                        let g:go_to_buffer_default_mapping = 0
+                        nmap <Left> <Plug>(go-to-buffer-backward)
+                        nmap <Right> <Plug>(go-to-buffer-forward)
+<
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:fdm=manual:
