@@ -1,19 +1,13 @@
-Switch Buffers Like you Switch Tabs
-===================================
+go-to-buffer
+============
+
+Switch you buffer just like you would with tabs using key mappings similar to
+the built-ins `gt` and `gT`.
 
 Usage
 -----
-| Mode   | Default Key | `<Plug>` map                    | Description                                                             |
-| ------ | ----------- | ------------------------------- | ----------------------------------------------------------------------- |
-| normal | gb          | `<Plug>(go-to-buffer-forward)`  | Go to the next buffer. Wraps around from the last to the first one.     |
-| normal | gB          | `<Plug>(go-to-buffer-backward)` | Go to the previous buffer. Wraps around from the first to the last one. |
-
-Supplying a count to either <Plug>(go-to-buffer-forward) or <Plug>(go-to-buffer-backward) will go to the {count} buffer.
-
-Customization
--------------
-Example:
-```vim
-nmap <Right> <Plug>(go-to-buffer-forward)
-nmap <Left> <Plug>(go-to-buffer-backward)
-```
+| Mode   | Key Mapping             | Description                                                             |
+| ------ | ----------------------- | ----------------------------------------------------------------------- |
+| normal | gb                      | Go to the next buffer. Wraps around from the last to the first one.     |
+| normal | gB                      | Go to the previous buffer. Wraps around from the first to the last one. |
+| normal | {count}gb  or {count}gB | Go to Count {count} buffer.                                             |

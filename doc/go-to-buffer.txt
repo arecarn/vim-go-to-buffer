@@ -1,6 +1,6 @@
 *go-to-buffer* switch buffers like you switch tabs
 
-                                  go-to-buffer~
+                                go-to-buffer~
 
 Description ....................................... |go-to-buffer-description|
 Usage ............................................. |go-to-buffer-usage|
@@ -8,13 +8,13 @@ Usage ............................................. |go-to-buffer-usage|
 Configuration ..................................... |go-to-buffer-configuration|
     Variables ..................................... |go-to-buffer-variables|
 
-
                                                               *go-to-buffer.txt*
 
 ==============================================================================
 DESCRIPTION                                           *go-to-buffer-description*
 
-Navigate and switch you buffer just like you would with tabs
+Switch you buffer just like you would with tabs using key mappings similar to
+the built-ins |gt| and |gT|.
 
 ==============================================================================
 USAGE                                                       *go-to-buffer-usage*
@@ -23,17 +23,17 @@ USAGE                                                       *go-to-buffer-usage*
 KEY MAPPINGS                                         *go-to-buffer-key-mappings*
                                                 *gb*
 gb                      Go to the next buffer. Wraps around from the last to
-                        the first one. Supplying a count will go to the
-                        {count} buffer.
+                        the first one.
                         Plug mapping: `<Plug>(go-to-buffer-forward)`
 
 
                                                 *gB*
 gB                      Go to the previous buffer. Wraps around from the first
-                        to the last one. Supplying a count will go to the
-                        {count} buffer.
+                        to the last one.
                         Plug mapping: `<Plug>(go-to-buffer-backward)`
 
+{count}gb
+{count}gB               Go to Count {count} buffer.
 ==============================================================================
 CONFIGURATION                                       *go-to-buffer-configuration*
 
