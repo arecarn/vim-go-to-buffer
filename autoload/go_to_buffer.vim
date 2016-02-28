@@ -13,9 +13,9 @@ set cpo&vim
 function! go_to_buffer#do(direction, count) abort
     if a:count == 0
         if a:direction == 'forward'
-            execute " silent normal! :bn\<CR>"
+            execute "silent normal! :bnext\<CR>"
         elseif a:direction == 'backward'
-            execute "silent normal! :bp\<CR>"
+            execute "silent normal! :bprevious\<CR>"
         endif
     else
         execute 'silent normal! :' . a:count . "b\<CR>"
